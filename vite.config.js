@@ -2,17 +2,15 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [react()],  // activer le support JSX et React
+  plugins: [react()],  
 
   server: {
-    port: 5173,  // port du serveur de développement
-
-    // PROXY : redirige les requêtes /api vers le backend Express
-    // Exemple : fetch('/api/annonces') → http://localhost:5000/api/annonces
+    port: 5173,  
     proxy: {
       '/api': {
         target: 'http://localhost:5000',
-        changeOrigin: true,  // modifie l'en-tête Origin de la requête
+        changeOrigin: true,  
+        //le proxy modifie l'origine de la requête pour qu'elle corresponde au serveur cible
       },
     },
   },
