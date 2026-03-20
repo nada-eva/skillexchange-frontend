@@ -1,0 +1,28 @@
+/* Importer dans LoginPage.jsx et RegisterPage.jsx :
+   import '../styles/auth.css'; */
+ 
+
+.auth-page {
+  min-height: calc(100vh - var(--navbar-height));
+  display: flex; align-items: center; justify-content: center;
+  padding: 2rem;
+}
+.auth-card {
+  width: 100%; max-width: 440px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 2rem;
+  animation: fadeUp .4s ease;
+}
+.auth-header { text-align: center; margin-bottom: 1.75rem; }
+.auth-icon {
+  width: 52px; height: 52px; border-radius: 13px;
+  background: var(--purple); display: flex; align-items: center;
+  justify-content: center; font-size: 22px; margin: 0 auto 1rem;
+}
+.auth-header h1 { font-size: 1.5rem; font-weight: 800; letter-spacing: -.02em; }
+.auth-header p  { font-size: .875rem; color: var(--text3); margin-top: .35rem; }
+.auth-switch {
+  text-align: center; margin-top: 1.25rem;
+  font-size: .8rem; color: var(--text3);
+}
+.auth-switch a { color: var(--purple-light); font-weight: 600; }
