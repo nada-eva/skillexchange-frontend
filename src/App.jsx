@@ -4,6 +4,8 @@ import { NotificationProvider } from './context/NotificationContext';
 import Layout      from './components/layout/Layout';
 import PrivateRoute from './components/shared/PrivateRoute';
 import AdminRoute   from './components/shared/AdminRoute';
+import AnnonceDetailPage from './pages/AnnonceDetailPage';
+
 
 import HomePage       from './pages/HomePage';
 import AnnoncesPage   from './pages/AnnoncesPage';
@@ -30,6 +32,7 @@ function App() {
               {/* ── Routes publiques ── */}
               <Route path="/"          element={<HomePage />}     />
               <Route path="/annonces" element={<AnnoncesPage />} />
+              <Route path="/annonces/:id" element={<AnnonceDetailPage />} />
               <Route path="/login"    element={<LoginPage />}    />
               <Route path="/register" element={<RegisterPage />} />
 
